@@ -6,7 +6,7 @@ The Moonboat Grocery website seamlessly integrates user account management with 
 
 ## Available Scripts
 
-Step 1: Before utilizing the Moonboat Grocery website, ensure you have installed the 'axios' package to establish a connection with the backend:
+Step 1: Before utilizing the Moonboat Grocery website, ensure you have installed Node.js and the 'axios' package to establish a connection with the backend:
 
 ### `npm install axios`
 
