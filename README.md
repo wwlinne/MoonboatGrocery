@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Full-Stack Website
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 The Moonboat Grocery website seamlessly integrates user account management with a robust database. Our platform features an intuitive and visually appealing design, leveraging React.js and Ant Design for the frontend. On the backend, we utilize PHP, MySQL, and Node.js to ensure smooth functionality and efficient data management.
