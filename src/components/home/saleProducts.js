@@ -38,7 +38,7 @@ function SaleProducts(){
                 {
                    products.map(product =>{
                         return(
-                        <Col sm={12} lg={6}>
+                        <Col sm={12} lg={6} key={product.key}>
                         <div className='content'>
                         <div className='image'>
                             <img src={product.image} alt = 'product' />

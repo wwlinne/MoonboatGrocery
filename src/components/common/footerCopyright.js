@@ -1,4 +1,4 @@
-import { BackTop } from 'antd';
+import { FloatButton } from 'antd';
 import payment from '../../assets/images/payment.png';
 
 function FooterCopyright(){
@@ -10,7 +10,7 @@ function FooterCopyright(){
                     <img src={payment} alt="payment" />
                 </div>
             </div>
-        <BackTop></BackTop>
+        <FloatButton.BackTop></FloatButton.BackTop>
         </div>
     )
 }

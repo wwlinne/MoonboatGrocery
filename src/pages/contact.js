@@ -1,7 +1,31 @@
+import { useState } from 'react';
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+
 import { Button, Form, Input, Select } from 'antd';
 const { Option } = Select;
 const { TextArea } = Input;
 function AppContact(){
+
+    const [inputs, setInputs] = useState({});
+    const navigate = useNavigate();
+
+    const handleChange = (event) =>{
+        const { name, value } = event.target;
+        setInputs(inputs => ({...inputs, [name]: value}));        
+    }
+    const handleSubmit = async (values) => {
+        try {
+          
+            const data = {...inputs, type: 'contact'};
+        await axios.post('http://localhost/MoonboatGrocery/contact_info/save', data).then(function(response){
+            console.log(response.data);
+            navigate('/');
+        });
+        } catch (error) {
+          console.error("Error submitting data:", error);
+        }
+    };
     const prefixSelector = (
         <Form.Item name="prefix" noStyle>
           <Select
@@ -19,22 +43,14 @@ function AppContact(){
                 <h2>Contact</h2>
                 <Form
                     name="basic"
-                    labelCol={{
-                    span: 8,
-                    }}
-                    wrapperCol={{
-                    span: 16,
-                    }}
-                    style={{
-                    maxWidth: 600,
-                    }}
-                    initialValues={{
-                    remember: true,
-                    }}
-                
+                    labelCol={{span: 8,}}
+                    wrapperCol={{span: 16,}}
+                    style={{maxWidth: 600,}}
+                    initialValues={{remember: true,}}
                     autoComplete="off"
                     layout='vertical'
                     size='large'
+                    onFinish={handleSubmit}
                 >
                     <Form.Item
                     label="Fullname"
@@ -46,7 +62,7 @@ function AppContact(){
                         },
                     ]}
                     >
-                    <Input />
+                    <Input name="name" onChange={handleChange}/>
                     </Form.Item>
 
                     <Form.Item
@@ -60,7 +76,7 @@ function AppContact(){
                         },
                     ]}
                     >
-                    <Input />
+                    <Input name="email" onChange={handleChange}/>
                     </Form.Item>
 
                     <Form.Item
@@ -74,23 +90,23 @@ function AppContact(){
                         ]}
                     >
                         <Input
-                        addonBefore={prefixSelector}
-                        style={{
-                            width: '100%',
-                        }}
+                         name="phone"
+                         addonBefore={prefixSelector}
+                         style={{width: '100%'}}
+                         onChange={handleChange}
                         />
                     </Form.Item>
 
                     <Form.Item
                      name="message"
-                     label="Message"
+                     label="msg"
                      rules={[
                      {
                          required: true,
                          message: 'Please input your message!',
                      },
                      ]}>
-                    <TextArea rows={4} />
+                    <TextArea name="msg" rows={4} />
 
                     </Form.Item>
                     <Form.Item

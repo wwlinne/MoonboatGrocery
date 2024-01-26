@@ -8,7 +8,8 @@ import {
    GithubOutlined,
    YoutubeOutlined,
    UserOutlined,
-   MenuOutlined
+   MenuOutlined,
+   ShoppingCartOutlined
 } from '@ant-design/icons';
 
 function AppHeader(){
@@ -19,6 +20,8 @@ function AppHeader(){
     const onClose = () => {
       setOpen(false);
     };
+    
+    
     return(
         <div className="container">
             <div className = "topBar">
@@ -33,9 +36,9 @@ function AppHeader(){
                         <li><a href="https://www.linkedin.com/in/guohui-wan-6b4828252/"><span><LinkedinOutlined />LinkedIn</span></a></li>
                         <li><a href="https://github.com/wwlinne"><span><GithubOutlined />GitHub</span></a></li>
                         <li><a href="https://www.youtube.com/channel/UCIX0TE5zj0-UomeGysK95sA"><span><YoutubeOutlined />YouTube</span></a></li>
+                        <li><NavLink to='/pages/account'><span><UserOutlined />Admin</span></NavLink></li>
 
                 </ul>
-                <button><UserOutlined />My Account</button>
             </div>
             </div>
             <div className='header separator'>
@@ -52,6 +55,7 @@ function AppHeader(){
                             <li><NavLink onClick={onClose} to='/pages/shop'>Shop</NavLink></li>
                             <li><NavLink onClick={onClose} to='/pages/faq'>FAQ</NavLink></li>
                             <li><NavLink onClick={onClose} to='/pages/contact'>Contact</NavLink></li>
+                            <li><NavLink onClick={onClose} to='/pages/cart'><span><ShoppingCartOutlined /></span></NavLink></li>
                         </ul>
                     </nav>
                 </Drawer>
@@ -63,6 +67,7 @@ function AppHeader(){
                         <li><NavLink to='/pages/shop'>Shop</NavLink></li>
                         <li><NavLink to='/pages/faq'>FAQ</NavLink></li>
                         <li><NavLink to='/pages/contact'>Contact</NavLink></li>
+                        <li><NavLink to='/pages/cart'><span><ShoppingCartOutlined /></span></NavLink></li>
                     </ul>
                 </nav>
             </div>

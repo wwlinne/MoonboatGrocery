@@ -37,7 +37,7 @@ function RecentProducts(){
                 {
                    products.map(product =>{
                         return(
-                        <Col xs={24} sm={12} lg={6}>
+                        <Col xs={24} sm={12} lg={6} key={product.key}>
                         <div className='content'>
                         <div className='image'>
                             <img src={product.image} alt = 'product' />
