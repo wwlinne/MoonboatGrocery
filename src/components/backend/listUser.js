@@ -2,7 +2,6 @@
     import { useEffect, useState } from "react";
     import { useNavigate } from "react-router-dom";
     import { Button } from 'antd';
-    import { Space, Table, Tag } from 'antd';
 
     
     export default function ListUser() {
@@ -31,6 +30,8 @@
     return (
         <div className="block">
             <div className="container">
+            <h2>All Members</h2>
+
             <table>
                 <thead>
                     <tr>
@@ -42,8 +43,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                {users.map((user, key) =>
-                        <tr key={key}>
+                {users.map((user) =>
+                        <tr key={user.key}>
                             <td>{user.id}</td>
                             <td>{user.name}</td>
                             <td>{user.email}</td>
@@ -63,4 +64,5 @@
         </div>
     );
 }
+
 

@@ -17,8 +17,7 @@ function AppContact(){
     const handleSubmit = async (values) => {
         try {
           
-            const data = {...inputs, type: 'contact'};
-        await axios.post('http://localhost/MoonboatGrocery/contact_info/save', data).then(function(response){
+        await axios.post('http://localhost/MoonboatGrocery/contact_info/save', inputs).then(function(response){
             console.log(response.data);
             navigate('/');
         });

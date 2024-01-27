@@ -25,11 +25,14 @@ function EditUser(){
     const value = event.target.value;
     setInputs(values => ({...values, [name]: value}));
 }
+const handleGoBack = () => {
+    navigate('/components/backend/user');
+};
  const handleSubmit = async (values) => {
     try {
      axios.put(`http://localhost/MoonboatGrocery/user/${id}/edit`, inputs).then(function(response){
         console.log(response.data);
-        navigate('/');
+        navigate('/components/backend/user');
     });
     } catch (error) {
       console.error("Error submitting data:", error);
@@ -54,12 +57,15 @@ function EditUser(){
     return(
         <div className="block">
             <div className="container">
+            <h2>Update Account</h2>
+
                 <Form
                     name="basic"
                     labelCol={{span: 8}}
                     wrapperCol={{span: 16}}
                     style={{maxWidth: 600}}
                     initialValues={inputs} 
+                    autoComplete="on"
                     onFinish={handleSubmit}
                 >
                     <Form.Item
@@ -116,7 +122,10 @@ function EditUser(){
                         }}
                     >
                         <Button type="primary" htmlType="submit">
-                            Submit
+                            Update
+                        </Button>
+                        <Button type="primary" onClick={handleGoBack}>
+                            Back
                         </Button>
                     </Form.Item>
                 </Form>

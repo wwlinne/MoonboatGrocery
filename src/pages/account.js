@@ -13,7 +13,7 @@ export default function APPAccount(){
             <h2>Admin Panel</h2>
             <div className='card'>
                 <Row gutter={[24,24]}>
-                    <Col xs={8} md={8}>
+                    <Col xs={24 } sm={24} md={12} lg={8}>
                     <Card
                         title="CHECK"
                         bordered={false}
@@ -31,18 +31,18 @@ export default function APPAccount(){
                         style={{width: 300,
                         }}
                     >
-                        <p><NavLink to='../components/Backend/user/create'>Create New Account</NavLink></p>
+                        <p><NavLink to='../components/backend/user/create'>Create New Account</NavLink></p>
                         <p>Create a new account to access exclusive features, personalized recommendations, and member-only discounts, enhancing your shopping journey.</p>
                     </Card>
                     </Col>
-                    <Col xs={8} md={8}>
+                    <Col xs={24} md={8}>
                     <Card
                         title="UPDATE"
                         bordered={false}
                         style={{width: 300,
                         }}
                     >
-                        <p><NavLink to='../components/Backend/user/:id/edit'>Modifiy Existed Account</NavLink></p>
+                        <p><NavLink to='../components/backend/user/:id/edit'>Modifiy Existed Account</NavLink></p>
                         <p>Update user address and payment methods to ensure accurate and secure transactions, providing peace of mind while enjoying the shopping experience. </p>
                     </Card>
                     </Col>

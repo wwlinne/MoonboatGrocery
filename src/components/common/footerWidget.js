@@ -71,7 +71,7 @@ function FooterWidgt(){
                         />
                     </Col>
                      {/* top related */}
-                     <Col sm={12} md={6}>
+                     <Col xs={{ span: 24 }} sm={{ span: 12 }} md={6}>
                      <h3>Top Rated</h3>
                         <List
                             itemLayout="horizontal"

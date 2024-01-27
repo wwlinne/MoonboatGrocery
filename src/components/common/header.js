@@ -55,7 +55,7 @@ function AppHeader(){
                             <li><NavLink onClick={onClose} to='/pages/shop'>Shop</NavLink></li>
                             <li><NavLink onClick={onClose} to='/pages/faq'>FAQ</NavLink></li>
                             <li><NavLink onClick={onClose} to='/pages/contact'>Contact</NavLink></li>
-                            <li><NavLink onClick={onClose} to='/pages/cart'><span><ShoppingCartOutlined /></span></NavLink></li>
+                            <li><NavLink onClick={onClose} to='../components/backend/shopping_cart'><span><ShoppingCartOutlined /></span></NavLink></li>
                         </ul>
                     </nav>
                 </Drawer>
@@ -67,7 +67,7 @@ function AppHeader(){
                         <li><NavLink to='/pages/shop'>Shop</NavLink></li>
                         <li><NavLink to='/pages/faq'>FAQ</NavLink></li>
                         <li><NavLink to='/pages/contact'>Contact</NavLink></li>
-                        <li><NavLink to='/pages/cart'><span><ShoppingCartOutlined /></span></NavLink></li>
+                        <li><NavLink to='../components/backend/shopping_cart'><span><ShoppingCartOutlined /></span></NavLink></li>
                     </ul>
                 </nav>
             </div>

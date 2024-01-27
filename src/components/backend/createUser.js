@@ -6,7 +6,7 @@ import { Button, Form, Input, Select } from 'antd';
 const { Option } = Select;
 
 export default function CreateUser(){
-    const [inputs, setInputs] = useState({});
+    const [inputs, setInputs] = useState([]);
     const navigate = useNavigate();
 
     const handleChange = (event) =>{
@@ -14,20 +14,18 @@ export default function CreateUser(){
         setInputs(inputs => ({...inputs, [name]: value}));        
     }
 
-    const handleSubmit = async (values) => {
+    const handleSubmit = async () => {
         try {
-            const data = {...inputs, type: 'user'};
-
-        await axios.post('http://localhost/MoonboatGrocery/user/save', data).then(function(response){
+        await axios.post('http://localhost/MoonboatGrocery/user/save', inputs).then(function(response){
             console.log(response.data);
-            navigate('/');
+            navigate('/components/backend/user');
         });
         } catch (error) {
           console.error("Error submitting data:", error);
         }
     };
     const handleGoBack = () => {
-        navigate('/');
+        navigate('/components/backend/user');
     };
     const prefixSelector = (
         <span>
@@ -46,13 +44,14 @@ export default function CreateUser(){
     return(
         <div className="block">
             <div className="container">
+            <h2>Create New Account</h2>
                 <Form
                     name="basic"
                     labelCol={{span: 8}}
                     wrapperCol={{span: 16}}
                     style={{maxWidth: 600}}
                     initialValues={{remember: true}}
-                    autoComplete="off"
+                    autoComplete="on"
                     onFinish={handleSubmit}
                 >
                     <Form.Item
@@ -63,7 +62,7 @@ export default function CreateUser(){
                             message: 'Please input your username!',
                         }]}
                     >
-                        <Input name="name" onChange={handleChange} />
+                        <Input name="name" onChange={handleChange} autoComplete='on'/>
                     </Form.Item>
                     <Form.Item
                         label="email"
@@ -73,7 +72,7 @@ export default function CreateUser(){
                             message: 'Please input your email!',
                         }]}
                     >
-                        <Input name="email" onChange={handleChange} />
+                        <Input name="email" onChange={handleChange} autoComplete='on'/>
                     </Form.Item>
                     <Form.Item
                         label="phone"
@@ -88,6 +87,7 @@ export default function CreateUser(){
                             addonBefore={prefixSelector}
                             style={{width: '100%'}}
                             onChange={handleChange}
+                            autoComplete='on'
                         />
                     </Form.Item>
                     <Form.Item
