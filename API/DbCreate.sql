@@ -5,12 +5,13 @@ USE MoonboatGrocery;
 DROP TABLE IF EXISTS contact_info;
 DROP TABLE IF EXISTS shopping_cart;
 DROP TABLE IF EXISTS product;
-DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS `user`;
 
-CREATE TABLE user (
+CREATE TABLE `user` (
 id INT AUTO_INCREMENT,
 name VARCHAR(50), 
 email VARCHAR(50),
+phone BIGINT(10),
 password VARCHAR(500),
 CONSTRAINT pk_user PRIMARY KEY (id)
 );
