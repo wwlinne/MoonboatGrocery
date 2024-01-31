@@ -1,48 +1,46 @@
-# Full-Stack Website
+# Moonboat 🌙🛥️🌙
+🍇Online Fancy Grocery🥬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
-The Moonboat Grocery website seamlessly integrates user account management with a robust database. Our platform features an intuitive and visually appealing design, leveraging React.js and Ant Design for the frontend. On the backend, we utilize PHP, MySQL, and Node.js to ensure smooth functionality and efficient data management.
+Moonboat Grocery is an online grocery shopping platform where users can browse and add products to their basket. 
+The platform offers a seamless shopping experience with intuitive design and efficient data management.
+
+## Main 
+
+User CRUD
+
+## Backend Shop Cart
+
+User, Shopping List, and Shopping Cart CRUD
+
+# FULL Stack
+
+## Frontend: React.js 
+A sleek and responsive user interface developed with React.js for smooth navigation and immersive shopping experience.
+
+## Backend: Node.js, PHP
+Integration of PHP and Node.js for server-side scripting, ensuring smooth functionality and efficient data management.
+
+## Database: MySQL
+MySQL is utilized for storing and managing user and product data efficiently.
+
+## API Communication
+Axios facilitates communication between the frontend and backend, enabling seamless data exchange.
+
+# Features
+
+**Product Management**: Users can browse through a wide range of products and add them to their basket.
+
+**Basket Management**: Users can view and manage the products added to their basket.
+
+**User Login**: Users have the option to log in to the website to access personalized features.
+
+**Intuitive Design**: The platform features an intuitive and visually appealing design to enhance user experience.
+
+**Efficient Data Management**: Utilizing PHP, MySQL, and Node.js for backend development ensures efficient data management and smooth functionality.
 
 
-## Available Scripts
+# Future Enhancements
 
-Step 1: Before utilizing the Moonboat Grocery website, ensure you have installed Node.js and the 'axios' package to establish a connection with the backend:
-
-### `npm install axios`
-
-Step 2: Next, navigate to the API directory to configure your own database and make necessary adjustments, such as modifying the $server and $dbname parameters.
-
-Step 3: Once you've completed steps 1 and 2, navigate back to the project directory and execute:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Implementation of user authentication for enhanced security and personalized shopping experiences.
+Integration of payment gateway for secure online transactions.
+Addition of advanced search and filtering options for easier product discovery.
